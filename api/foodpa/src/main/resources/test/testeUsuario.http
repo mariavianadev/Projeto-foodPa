@@ -1,0 +1,33 @@
+#GET //chama os registrados
+GET http://localhost:8087/api/v1/usuario
+Content-Type: application/json
+###
+
+#POST // inserir no banco
+POST http://localhost:8087/api/v1/usuario
+Content-Type: application/json
+
+{
+    "nome":"germano",
+    "email":"germano@marialinda",
+    "senha":"marialinda123"
+}
+
+###
+
+#PUT // att
+PUT http://localhost:8087/api/v1/usuario
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome":"maria",
+    "email":"mariafeia",
+    "senha":"mariafeia123"
+}
+
+###
+
+#DELETE // trocar o id no final
+DELETE http://localhost:8087/api/v1/usuario/1
+Content-Type: application/json

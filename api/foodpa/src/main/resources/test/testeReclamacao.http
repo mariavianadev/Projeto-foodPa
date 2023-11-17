@@ -1,0 +1,35 @@
+#GET //chama os registrados
+GET http://localhost:8087/api/v1/reclamacao
+Content-Type: application/json
+###
+
+#POST // inserir no banco
+POST http://localhost:8087/api/v1/reclamacao
+Content-Type: application/json
+
+{
+    "titulo":"maria",
+    "descricao":"marialinda",
+    "idUsuario": 1
+}
+
+
+
+###
+
+#PUT // att
+PUT http://localhost:8087/api/v1/reclamacao/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "titulo":"mario",
+    "descricao":"marialinda",
+    "idUsuario":1
+}
+
+###
+
+#DELETE //trocar o id no final
+DELETE http://localhost:8087/api/v1/reclamacao/1
+Content-Type: application/json

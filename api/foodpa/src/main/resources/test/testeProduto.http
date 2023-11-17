@@ -1,0 +1,40 @@
+#GET //chama os registrados
+GET http://localhost:8087/api/v1/produto
+Content-Type: application/json
+###
+
+#POST // inserir no banco
+POST http://localhost:8087/api/v1/produto
+Content-Type: application/json
+
+{
+    "nome": "maria",
+    "valor": 123,
+    "foto": "adasda",
+    "descricao": "maria e muito linda",
+    "idRestaurante": 1
+}
+
+
+
+###
+
+#PUT // att
+PUT http://localhost:8087/api/v1/produto
+Content-Type: application/json
+
+{
+    "id": "1",
+    "nome": "maria",
+    "valor": 123,
+    "foto": "adasda",
+    "descricao": "maria e muito feia",
+    "idRestaurante": 1
+}
+
+
+###
+
+#DELETE //trocar o id no final
+DELETE http://localhost:8087/api/v1/produto/3
+Content-Type: application/json

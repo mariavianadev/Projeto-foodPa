@@ -1,0 +1,42 @@
+#GET //chama os registrados
+GET http://localhost:8087/api/v1/restaurante
+Content-Type: application/json
+###
+
+#POST // inserir no banco
+POST http://localhost:8087/api/v1/restaurante
+Content-Type: application/json
+
+{
+    "nome":"maria",
+    "cnpj":"123",
+    "endereco":"adasda",
+    "email":"marialinda",
+    "senha":"marialinda123",
+    "telefone":"123123",
+    "foto":"adasda"
+}
+
+
+###
+
+#PUT // att
+PUT http://localhost:8087/api/v1/restaurante
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome":"maria",
+    "cnpj":"14",
+    "endereco":"adasda",
+    "email":"mariafeia",
+    "senha":"mariafeia123",
+    "telefone":"134",
+    "foto":"adasda"
+}
+
+###
+
+#DELETE //trocar o id no final
+DELETE http://localhost:8087/api/v1/restaurante/1
+Content-Type: application/json
