@@ -89,9 +89,10 @@ public class RestauranteController {
         return restaurante;
     }
 
-    private String diretorio = "D:\\fotoFoodPa";
+    private String diretorio = "C:\\xampp\\htdocs\\img";
     @PostMapping(path = "/foto/{id}", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<Object> saveEmployee(@RequestParam("file") MultipartFile document, @PathVariable(value = "id") int id) {
+        System.out.println("RestauranteController.saveEmployee(" +document.getOriginalFilename()+ ")");
         try {
 
             // Gere um nome de arquivo único com UUID
@@ -111,7 +112,7 @@ public class RestauranteController {
             document.transferTo(file);
 
             // Salve apenas o caminho no banco de dados...
-            String imageUrl = diretorio + "\\" + fileName + fileExtension;
+            String imageUrl = "http://localhost/img/"+ fileName + fileExtension;
             return ResponseEntity.status(HttpStatus.OK).body(restauranteService.updateFoto(imageUrl, id));
                    } catch (IOException e) {
             // Tratar exceção de leitura de arquivo

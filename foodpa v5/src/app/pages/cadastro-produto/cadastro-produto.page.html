@@ -1,0 +1,74 @@
+<ion-content>
+
+  <div class="foodPa">
+    <ion-text>
+      <h5>
+        <strong>
+          foodPa
+        </strong>
+      </h5>
+    </ion-text>
+  </div>
+  <br>
+  <div class="texto1">
+    <ion-text>
+      <h1>
+        Quer adicionar um produto?
+      </h1>
+      <h6>
+        Preencha os camps a seguir:
+      </h6>
+    </ion-text>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <form [formGroup]="formGroup" (ngSubmit)="verificarProduto()">
+    <div class="Frame3">
+      <div class="Nome">
+        <ion-input shape="round" color="warning" label="Nome" labelPlacement="floating" type="text" name="nome"
+          class="custom-input" formControlName="nome"></ion-input>
+      </div>
+      <br>
+      <div class="Valor">
+        <ion-input shape="round" color="warning" label="Valor" labelPlacement="floating" type="text"
+          class="custom-input" formControlName="valor"></ion-input>
+      </div>
+      <br>
+      <div class="Descricao">
+        <ion-input shape="round" color="warning" label="Descricao" labelPlacement="floating" type="text"
+          class="custom-input" formControlName="descricao"></ion-input>
+      </div>
+
+      <div class="botao"><ion-button  routerLink="/inicio-restaurante/" class="botaozinho" type="submit" size="large"
+          shape="round" [disabled]="!formGroup.valid">Adcionar Produto</ion-button></div>
+      <br>
+    </div>
+  </form>
+</ion-content>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button routerLink="/inicio-restaurante/">
+      <ion-icon class="home" size="large" name="home"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons>
+    <ion-button class="cardapio" routerLink="/cadastro-produto/">
+      <ion-icon class="cardapio" size="large" name="bag-add"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="end">
+    <ion-button routerLink="/dados-restaurante/">
+      <ion-icon class="dados" size="large" name="accessibility"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="primary">
+  </ion-buttons>
+</ion-toolbar>

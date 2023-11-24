@@ -79,11 +79,19 @@ public class ProdutoController {
         return produto;
     }
 
+    @GetMapping("/byRestaurante/{idRestaurante}")
+    public List<Produto> consultarPorId(@PathVariable("idRestaurante") int idRestaurante){
+        List<Produto> produtoList = produtoService.consultarPorIdRestaurante(idRestaurante);
+        return produtoList;
+    }
+
     private String diretorio = "D:\\Escola\\Programação para Web\\3 Ano\\foodPa v.2\\foto";
     @PostMapping("/{id}")
     
     public ResponseEntity<Object> salvarFoto(
             @RequestPart MultipartFile document, @PathVariable(value = "id") int id) {
+        
+        System.out.println("ProdutoController.salvarFoto(" +document.getOriginalFilename()+ ")");
         try {
 
             java.util.UUID uuid = java.util.UUID.randomUUID();

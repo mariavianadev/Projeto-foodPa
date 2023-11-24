@@ -15,6 +15,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
 public class Restaurante {
     private int id;
     private String nome;
@@ -23,6 +24,6 @@ public class Restaurante {
     private String email;
     private String senha;
     private String telefone;
+    private String categoria;
     private String foto;
-   
 }

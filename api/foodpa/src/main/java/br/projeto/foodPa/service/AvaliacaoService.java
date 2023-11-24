@@ -29,6 +29,12 @@ public class AvaliacaoService {
     public Avaliacao consultarPorId(int id){
         return avaliacaoDao.get(id);
     }
+
+    public Avaliacao consultarPorIdProdutoEidUsuario(int idUsuario, int idProduto){
+        return avaliacaoDao.getAvaliacaoPorIdProdutoEidUsuario(idUsuario, idProduto);
+    }
+
+    
     
     public void alterar(Avaliacao avaliacao){
         avaliacaoDao.update(avaliacao);

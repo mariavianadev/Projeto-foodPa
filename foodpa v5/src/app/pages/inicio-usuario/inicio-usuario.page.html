@@ -1,0 +1,75 @@
+<ion-content>
+
+  <div class="foodPa">
+    <ion-text>
+      <h5>
+        <strong>
+          foodPa
+        </strong>
+      </h5>
+    </ion-text>
+  </div>
+
+  <ion-searchbar color="dark"></ion-searchbar>
+
+  <ion-list class="bg-transparent">
+    <ion-fab slot="fixed" vertical="top" horizontal="start">
+      <ion-fab-button color="dark" size="small">
+        <ion-icon name="filter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="end">
+        <ion-fab-button type="submit" (click)="Pizzaria()" shape="round" fill="outline" color="warning" size="small">
+          <ion-icon name="pizza"></ion-icon> </ion-fab-button>
+        <ion-fab-button type="submit" (click)="Hamburgueria()" shape="round" fill="outline" color="warning" size="small">
+          <ion-icon name="fast-food"></ion-icon></ion-fab-button>
+        <ion-fab-button type="submit" (click)="Japonesa()" shape="round" fill="outline" color="warning" size="small">
+          <ion-icon name="bonfire"></ion-icon> </ion-fab-button>
+        <ion-fab-button type="submit" (click)="Sorveteria()" shape="round" fill="outline" color="warning" size="small">
+          <ion-icon name="ice-cream"></ion-icon></ion-fab-button>
+        <ion-fab-button type="submit" (click)="Gourmet()" shape="round" fill="outline" color="warning" size="small">
+          <ion-icon name="sparkles"></ion-icon></ion-fab-button>
+        <ion-fab-button type="submit" (click)="Mar()" shape="round" fill="outline" color="warning" size="small"> <ion-icon
+            name="boat"></ion-icon> </ion-fab-button>
+        <ion-fab-button type="submit" (click)="Todos()" shape="round" fill="outline" color="warning" size="small">
+          <ion-icon name="ellipsis-horizontal-circle"></ion-icon> </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+    <br>
+    <br>
+    <br>
+
+    <ion-item-sliding *ngFor="let restaurante of restaurantes; index as i">
+      <ion-item color="transparent" [routerLink]="['/restaurante-usuario/', restaurante.id]" detail>        <ion-label>
+          <h2>
+            {{restaurante.nome}}
+          </h2>
+          <ion-icon color="warning" name="star"></ion-icon>
+          <ion-icon color="warning" name="star"></ion-icon>
+          <ion-icon color="warning" name="star"></ion-icon>
+          <ion-icon color="warning" name="star-half"></ion-icon>
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+
+
+  </ion-list>
+</ion-content>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button>
+      <ion-icon class="home" size="large" name="home"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+
+
+  <ion-buttons slot="end">
+    <ion-button routerLink="/dados-usuario/">
+      <ion-icon class="dados" size="large" name="accessibility"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="primary">
+  </ion-buttons>
+</ion-toolbar>

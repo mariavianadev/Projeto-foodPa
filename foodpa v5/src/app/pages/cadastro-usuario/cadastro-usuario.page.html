@@ -1,0 +1,52 @@
+<ion-content>
+
+  <div class="foodPa">
+    <ion-text>
+      <h5>
+        <strong>
+          foodPa
+        </strong>
+      </h5>
+    </ion-text>
+  </div>
+
+  <div class="texto1">
+    <ion-text>
+      <h1>
+        Ótimo!
+      </h1>
+      <h6>
+        Preencha os dados a seguir
+      </h6>
+    </ion-text>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <form [formGroup]="formGroup" (ngSubmit)="verificarUsuario()">
+    <div class="Frame3">
+      <div class="Nome">
+        <ion-input shape="round" color="warning" label="Nome" labelPlacement="floating" type="text" name="nome"
+          class="custom-input" formControlName="nome"></ion-input>
+      </div>
+      <br>
+      <div class="Email">
+        <ion-input shape="round" color="warning" label="Email" labelPlacement="floating" type="text"
+          class="custom-input" formControlName="email"></ion-input>
+      </div>
+      <br>
+      <div class="Senha">
+        <ion-input shape="round" color="warning" label="Senha" labelPlacement="floating" type="password"
+          class="custom-input" formControlName="senha"></ion-input>
+      </div>
+      <br>
+
+      <div class="botao"><ion-button routerLink="/login-usuario/" class="botaozinho" type="submit" size="large"
+          shape="round" [disabled]="!formGroup.valid">Cadastrar</ion-button></div>
+      <br>
+    </div>
+  </form>
+</ion-content>

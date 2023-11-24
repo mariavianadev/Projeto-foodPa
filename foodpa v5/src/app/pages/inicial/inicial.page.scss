@@ -1,0 +1,53 @@
+ion-button{
+    --background: #ffffff;
+    --color: #938686;
+
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+    --padding-bottom: 12vh;
+    --padding-end: 12vh;
+    --padding-start:12vh;
+    --padding-top: 12vh;
+
+    text-align: center;
+    align-self: center
+}
+
+ion-icon{
+    font-size: 100px;
+}
+
+.foodPa {
+    text-align: center;
+}
+
+.texto1 {
+    text-align: center;
+    color: #C9BCBC;
+}
+.restaurante{
+    text-align: center;
+}
+.usuario{
+    text-align: center;
+    
+}
+
+ion-input.custom {
+    --background: #ffffff;
+    --color: #938686;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: 0.8;
+
+    --padding-bottom: 12vh;
+    --padding-end: 12vh;
+    --padding-start:12vh;
+    --padding-top: 12vh;
+
+    --align-self: center;
+
+}
+
+ion-content {
+    --background: #fff url("../../../assets/imagem2.png") no-repeat center center / cover;
+}
