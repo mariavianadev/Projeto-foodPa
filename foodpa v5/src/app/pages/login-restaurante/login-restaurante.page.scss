@@ -1,0 +1,62 @@
+ion-button{
+
+    --color: rgb(255, 255, 255);
+
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+    align-self: center
+}
+
+
+ion-button.botaozinho{
+    --background: rgb(251, 180, 26);
+    
+}
+
+ion-button.botaozinho2{
+    --background: rgb(204, 51, 21);
+    
+}
+
+.botao {
+    margin-top: 60%;
+    text-align: center;
+}
+
+.botao2 {
+    text-align: center;
+}
+
+.foodPa {
+    text-align: center;
+}
+
+.texto1 {
+    text-align: center;
+    color: #C9BCBC;
+}
+
+.texto2 {
+    text-align: center;
+    color: #C9BCBC;
+}
+
+
+ion-input.custom {
+    --background: #ffffff;
+    --color: #938686;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: 0.8;
+
+    --padding-bottom: 0px;
+    --padding-end: 30px;
+    --padding-start: 30px;
+    --padding-top: 0px;
+
+    --align-self: center;
+
+}
+
+ion-content {
+    --background: #fff url("../../../assets/imagem.png") no-repeat center center / cover;
+}

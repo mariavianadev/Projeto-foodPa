@@ -1,0 +1,86 @@
+<ion-content>
+
+  <div class="foodPa">
+    <ion-text>
+      <h5>
+        <strong>
+          foodPa
+        </strong>
+      </h5>
+    </ion-text>
+  </div>
+
+  <div class="texto1">
+    <ion-text>
+      <h1>
+        Ótimo!
+      </h1>
+      <h6>
+        Preencha os dados a seguir
+      </h6>
+    </ion-text>
+  </div>
+
+  <br>
+  <br>
+
+  <form [formGroup]="formGroup" (ngSubmit)="verificarRestaurante()">
+
+    <div class="Frame3">
+      <div class="Nome">
+        <ion-input shape="round" color="warning" label="Nome" labelPlacement="floating" type="text"
+          formControlName="nome" class="custom-input"></ion-input>
+      </div>
+
+      <br>
+
+      <div class="Cnpj">
+        <ion-input shape="round" color="warning" label="CNPJ" labelPlacement="floating" type="text"
+          formControlName="cnpj" class="custom-input"></ion-input>
+      </div>
+
+      <br>
+
+      <div class="Telefone">
+        <ion-input shape="round" color="warning" label="Telefone" labelPlacement="floating" type="email"
+          formControlName="telefone" class="custom-input" ></ion-input>
+      </div>
+
+      <br>
+
+      <div class="Endereco">
+        <ion-input shape="round" color="warning" label="Endereco" labelPlacement="floating" formControlName="endereco"
+          class="custom-input"></ion-input>
+      </div>
+
+      <br>
+
+      <div class="Email">
+        <ion-input shape="round" color="warning" label="Email" labelPlacement="floating" type="text"
+          formControlName="email" class="custom-input"></ion-input>
+      </div>
+      <br>
+      <div class="Senha">
+        <ion-input shape="round" color="warning" label="Senha" labelPlacement="floating" type="password"
+          formControlName="senha" class="custom-input"></ion-input>
+      </div>
+      <br>
+      <ion-item>
+        <ion-select shape="round" color="warning" class="custom-input" label="Categoria" placeholder="Categoria" formControlName="categoria">
+          <ion-select-option value="Pizzaria">Pizzaria</ion-select-option>
+          <ion-select-option value="Hamburgueria">Hamburgueria</ion-select-option>
+          <ion-select-option value="Japonesa">Comida Japonesa</ion-select-option>
+          <ion-select-option value="Sorveteria">Sorveteria</ion-select-option>
+          <ion-select-option value="Gourmet">Gourmet</ion-select-option>
+          <ion-select-option value="Mar">Frutos do MaRr</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <br>
+      <div class="botao"><ion-button class="botaozinho" type="submit" size="large" shape="round"
+          [disabled]="!formGroup.valid">Cadastrar</ion-button></div>
+      <br>
+
+    </div>
+  </form>
+</ion-content>

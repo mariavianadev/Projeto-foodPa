@@ -46,4 +46,8 @@ public class ProdutoService {
     public void excluir(int id){
         produtoDao.delete(id);
     }
+
+    public List<Produto> consultarPorIdRestaurante(int idRestaurante){
+        return produtoDao.getByIdRestaurante(idRestaurante);
+    }
 }

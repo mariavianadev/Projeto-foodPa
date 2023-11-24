@@ -5,6 +5,8 @@
 package br.projeto.foodPa.dao;
 
 import br.projeto.foodPa.model.Avaliacao;
+import br.projeto.foodPa.model.Produto;
+
 import java.util.List;
 import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
 import org.jdbi.v3.sqlobject.customizer.BindBean;
@@ -30,6 +32,11 @@ public interface AvaliacaoDao {
             " where id = :idAvaliacao;")
     Avaliacao get(@Bind("idAvaliacao") int idAvaliacao);
 
+     @SqlQuery("select * " +
+            " from avalaicao " +
+            " where idUsuario = :idUsuario " +
+            " where idProduto = :idProduto; ")
+    Avaliacao getAvaliacaoPorIdProdutoEidUsuario(@Bind("idProduto") int idProduto, @Bind("idUsuario") int idUsuario);
     
     @SqlQuery("select * " +
             " from avaliacao " +

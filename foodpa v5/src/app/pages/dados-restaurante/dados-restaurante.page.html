@@ -1,0 +1,94 @@
+<ion-content>
+
+  <div class="foodPa">
+    <ion-text>
+      <h5>
+        <strong>
+          foodPa
+        </strong>
+      </h5>
+    </ion-text>
+  </div>
+
+  <br>
+  <div class="texto1">
+    <ion-text>
+      <font size="7"> Olá!</font>
+    </ion-text>
+  </div>
+  <div class="texto2">
+    <ion-text>
+      <font size="5">Esses são os seus dados:</font>
+    </ion-text>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <form [formGroup]="formGroup" (ngSubmit)="carregarRestaurante()">
+
+    <div class="Nome">
+      <ion-input shape="round" color="warning" label="Nome" labelPlacement="floating" type="text" class="custom-input"
+        formControlName="nome"></ion-input>
+    </div>
+
+    <br>
+
+    <div class="CNPJ">
+      <ion-input shape="round" color="warning" label="CNPJ" labelPlacement="floating" type="text" class="custom-input"
+        formControlName="cnpj"></ion-input>
+    </div>
+
+    <br>
+
+    <div class="Telefone">
+      <ion-input shape="round" color="warning" label="Telefone" labelPlacement="floating" type="text" class="custom-input"
+        formControlName="telefone"></ion-input>
+    </div>
+
+    <br>
+
+    <div class="Endereço">
+      <ion-input shape="round" color="warning" label="Endereço" labelPlacement="floating" type="text" class="custom-input"
+        formControlName="endereco"></ion-input>
+    </div>
+
+    <br>
+    
+    <div class="Email">
+      <ion-input shape="round" color="warning" label="Email" labelPlacement="floating" type="text" class="custom-input"
+        formControlName="email"></ion-input>
+    </div>
+
+    <br>
+    <br>
+    <br>
+ 
+
+    <ion-button size="large" shape="round" class="salvar" type="submit" expand="block" (click)="salvar()">Salvar</ion-button>
+
+  </form>
+</ion-content>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button routerLink="/inicio-restaurante/"> 
+      <ion-icon class="home" size="large" name="home"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons>
+    <ion-button class="cardapio" routerLink="/cadastro-produto/">
+      <ion-icon class="cardapio" size="large" name="bag-add"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="end">
+    <ion-button routerLink="/dados-restaurante/">
+      <ion-icon class="dados" size="large" name="accessibility"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="primary">
+  </ion-buttons>
+</ion-toolbar>

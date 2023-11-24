@@ -1,0 +1,64 @@
+ion-button {
+  --background: #f1a83a;
+  --background-hover: #f1a83a;
+  --background-activated: #f1a83a;
+  --background-focused: #f1a83a;
+  --color: rgb(255, 255, 255);
+  --border-width: 1px;
+  --box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-start: 50px;
+  --padding-end: 50px;
+  align-self: center;
+}
+
+ion-input.custom-input {
+  --background: #ffffff;
+  --color: #938686;
+  --placeholder-color: #ddd;
+  --placeholder-opacity: 0.8;
+  --padding-bottom: 0px;
+  --padding-end: 30px;
+  --padding-start: 30px;
+  --padding-top: 0px;
+  align-self: center;
+}
+
+ion-select.custom-input {
+  --background: #ffffff;
+  --color: #938686;
+  --placeholder-color: #938686;
+  --placeholder-opacity: 0.8;
+  --padding-bottom: 0px;
+  --padding-end: 30px;
+  --padding-start: 30px;
+  --padding-top: 0px;
+  align-self: center;
+}
+
+.PreenchaOsCamposASeguir {
+  font-size: 20px;
+}
+
+.foodPa {
+  text-align: center;
+}
+
+.Line2 {
+  position: absolute;
+  border: 0.50px #300a0a solid;
+}
+
+.botao {
+  text-align: center;
+}
+
+.texto1 {
+  text-align: center;
+  color: #C9BCBC;
+}
+
+ion-content {
+  --background: #fff url("../../../assets/imagem.png") no-repeat center center / cover;
+}

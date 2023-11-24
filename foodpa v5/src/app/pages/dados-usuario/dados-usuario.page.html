@@ -1,0 +1,76 @@
+<ion-content>
+
+  <div class="foodPa">
+    <ion-text>
+      <h5>
+        <strong>
+          foodPa
+        </strong>
+      </h5>
+    </ion-text>
+  </div>
+
+  <br>
+  <div class="texto1">
+    <ion-text>
+      <font size="7"> Olá!</font>
+    </ion-text>
+  </div>
+  <div class="texto2">
+    <ion-text>
+      <font size="5">Esses são os seus dados:</font>
+    </ion-text>
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+  <form [formGroup]="formGroup" (ngSubmit)="carregarUsuario()">
+
+    <div class="Nome">
+      <ion-input shape="round" color="warning" label="Nome" labelPlacement="floating" type="text" class="custom-input"
+        formControlName="nome"></ion-input>
+    </div>
+
+    <br>
+
+    <div class="Email">
+      <ion-input shape="round" color="warning" label="Email" labelPlacement="floating" type="text" class="custom-input"
+        formControlName="email"></ion-input>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ion-button size="large" shape="round" class="salvar" type="submit" expand="block" (click)="salvar()">Salvar</ion-button>
+
+  </form>
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button routerLink="/inicio-usuario/">
+      <ion-icon class="home" size="large" name="home"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon class="dados" size="large" name="accessibility"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="primary">
+  </ion-buttons>
+</ion-toolbar>

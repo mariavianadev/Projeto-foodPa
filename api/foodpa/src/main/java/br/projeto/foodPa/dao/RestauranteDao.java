@@ -23,7 +23,7 @@ import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 public interface RestauranteDao {
     
     @GetGeneratedKeys
-    @SqlUpdate("insert into restaurante (nome, cnpj, endereco, email, senha, telefone, foto) values ( :nome, :cnpj, :endereco, :email, :senha, :telefone, :foto)")
+    @SqlUpdate("insert into restaurante (nome, cnpj, endereco, email, senha, telefone, categoria, foto) values ( :nome, :cnpj, :endereco, :email, :senha, :telefone, :categoria, :foto)")
     int insert(@BindBean Restaurante restaurante);
     
     
@@ -53,6 +53,7 @@ public interface RestauranteDao {
             " email = :email, " +
             " senha = :senha, " +
             " telefone = :telefone, " +
+            "   categoria = :categoria ,"+
             " foto = :foto" +
             " where id = :id;")
     int update(@BindBean Restaurante restaurante);

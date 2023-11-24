@@ -23,6 +23,8 @@ public interface ProdutoDao {
             " where id = :idProduto;")
     Produto get(@Bind("idProduto") int idProduto);
 
+
+
      @SqlQuery("select * " +
             " from produto " +
             " order by nome;")
@@ -51,4 +53,10 @@ public interface ProdutoDao {
         " set foto = :foto " +
         " where id = :id;")
         int updateFoto(@Bind("foto") String foto, @Bind("id") int id);
+
+             @SqlQuery("select * " +
+            " from produto " +
+            " where idRestaurante = :idRestaurante " +
+            " order by nome;")
+    List<Produto> getByIdRestaurante(@Bind("idRestaurante") int idRestaurante);
 }

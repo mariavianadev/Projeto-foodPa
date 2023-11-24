@@ -1,0 +1,47 @@
+<ion-content>
+  <div class="foodPa">
+    <ion-text>
+      <h5>
+        <strong>
+          foodPa
+        </strong>
+      </h5>
+    </ion-text>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="texto1">
+    <ion-text>
+      <font size="5"> Faça login para continuar</font>
+    </ion-text>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <form [formGroup]="formGroup" (ngSubmit)="verificarRestaurante()">
+
+    <div class="email">
+      <ion-input shape="round" color="warning" label="E-mail" labelPlacement="floating" type="text" class="custom"
+         formControlName="email"></ion-input>
+    </div>
+
+    <br>
+
+    <div class="senha"><ion-input shape="round" color="warning" label="Senha" labelPlacement="floating" type="password"
+        class="custom" formControlName="senha"></ion-input>
+    </div>
+
+    <div class="botao"><ion-button class="botaozinho" type="submit" size="large" shape="round"
+        [disabled]="!formGroup.valid">Entrar</ion-button></div>
+    <br>
+    <br>
+    <div class="botao2"><ion-button class="botaozinho2" routerLink="/cadastro-restaurante/"  size="small"
+        shape="round">Cadastre-se</ion-button></div>
+  </form>
+
+</ion-content>

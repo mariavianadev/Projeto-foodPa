@@ -1,0 +1,40 @@
+ion-button {
+    --color: rgb(255, 255, 255);
+    --border-width: 1px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    --padding-start: 50px;
+    --padding-end: 50px;
+}
+
+.foodPa {
+    text-align: center;
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+ion-toolbar {
+    color: rgb(255, 255, 255);
+}
+
+
+ion-input.custom {
+    --background: #ffffff;
+    --color: #938686;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: 0.8;
+
+    --padding-bottom: 0px;
+    --padding-end: 30px;
+    --padding-start: 30px;
+    --padding-top: 0px;
+
+    --align-self: center;
+
+}
+
+ion-content {
+    --background: #fff url("../../../assets/imagem.png") no-repeat center center / cover;
+}
