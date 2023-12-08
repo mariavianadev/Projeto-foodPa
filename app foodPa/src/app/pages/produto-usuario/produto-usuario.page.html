@@ -1,0 +1,62 @@
+<ion-content>
+  <ion-button routerLink="/inicio-usuario/" size="small" fill="clear">
+    <ion-icon class="voltar" name="caret-back"></ion-icon>
+  </ion-button>
+  <div class="foodPa">
+    <ion-text>
+      <h5>
+        <strong>
+          foodPa
+        </strong>
+      </h5>
+
+      <form [formGroup]="formGroup">
+
+        <div class="nome">
+          <ion-input type="text" size="small" formControlName="nome" readonly></ion-input>
+        </div>
+        <ion-img style="width:75%" class="foto" src="https://i.pinimg.com/564x/b7/3e/48/b73e48738ce592545d1b238beccad7d4.jpg"
+          alt="comida aleatória"></ion-img>
+          
+        <div class="descricao">
+          <ion-input type="text" formControlName="descricao" readonly></ion-input>
+        </div>
+        
+        <ion-icon color="warning" [name]="nota >= 1 ? 'star' : 'star-outline'" (click)="setNota(1)"></ion-icon>
+        <ion-icon color="warning" [name]="nota >= 2 ? 'star' : 'star-outline'" (click)="setNota(2)"></ion-icon>
+        <ion-icon color="warning" [name]="nota >= 3 ? 'star' : 'star-outline'" (click)="setNota(3)"></ion-icon>
+        <ion-icon color="warning" [name]="nota >= 4 ? 'star' : 'star-outline'" (click)="setNota(4)"></ion-icon>
+        <ion-icon color="warning" [name]="nota >= 5 ? 'star' : 'star-outline'" (click)="setNota(5)"></ion-icon>
+               
+        <h4>Nota geral:  {{ media }}</h4>
+        <h5>{{ total }} avaliações</h5>
+
+        <br>
+        
+        <ion-button size="large" shape="round" class="avaliar" expand="block" (click)="avaliarProduto()">Avaliar</ion-button>
+      </form>
+    </ion-text>
+
+  </div>
+
+
+  <br>
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button routerLink="/inicio-usuario/">
+      <ion-icon class="home" size="large" name="home"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="end">
+    <ion-button routerLink="/dados-usuario/">
+      <ion-icon class="dados" size="large" name="accessibility"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-buttons slot="primary">
+  </ion-buttons>
+</ion-toolbar>

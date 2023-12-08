@@ -1,0 +1,98 @@
+ion-button {
+    --color: rgb(255, 255, 255);
+    --border-width: 1px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    --padding-start: 50px;
+    --padding-end: 50px;
+}
+
+ion-button.cardapio {
+    --color: rgb(255, 255, 255);
+    --border-width: 1px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    --padding-start: 30px;
+    --padding-end: 70px;
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+.foodPa {
+    text-align: center;
+}
+
+.estrelinhas{
+  align-self: center;
+  margin-left: 80px;
+}
+
+ion-toolbar {
+    color: rgb(255, 255, 255);
+}
+
+.foto{
+  display: block;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 25px;
+}
+
+ion-input.custom {
+    --background: #ffffff;
+    --color: #938686;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: 0.8;
+
+    --padding-bottom: 0px;
+    --padding-end: 30px;
+    --padding-start: 30px;
+    --padding-top: 0px;
+
+    --align-self: center;
+
+}
+
+.avaliacao{
+    display: flex;
+   }
+
+  .star-icon{
+    list-style-type: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;/* alterar o tamanho das estrelas */
+  }
+
+  .star-icon::before{
+    content: "\2605";
+  }
+
+  .star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+  }
+
+  .avaliacao:hover .star-icon::before{
+    content: "\2605";
+  }
+  
+  .star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+  }
+
+.nome{
+ font-size: 20px;
+}
+
+ 
+
+ion-content {
+    --background: #fff url("../../../assets/imagem.png") no-repeat center center / cover;
+}
+
+ion-icon {
+    font-size: 50px; //Preferred size here
+}
