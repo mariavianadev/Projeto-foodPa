@@ -2,4 +2,6 @@ O APP proposto ajuda na tomada de decisões ao procurar um lugar para se aliment
 
 
 Documentação final: [Documentacao.foodPa.pdf](https://github.com/mariavianadev/Projeto-foodPa/files/13618468/Documentacao.foodPa.pdf)
+
+
 Documentação inicial: [Documentação inicial.pdf](https://github.com/mariavianadev/Projeto-foodPa/files/13618506/Documentacao.inicial.pdf)
